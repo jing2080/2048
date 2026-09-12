@@ -76,7 +76,7 @@ int plus_up()		//滑动相加(向上)
 				{
 					should_break=true;
 				}
-				for (int n=i;n<=3-offset;n++ && should_break!=true)//移位 
+				for (int n=i;n<=3-offset && should_break!=true;n++)//移位 
 				{
 					block[n][j]=block[n+offset][j];
 					block[n+offset][j]=0;
@@ -125,7 +125,7 @@ int plus_left()		//滑动相加(向左)
 				{
 					should_break=true;
 				}
-				for (int n=j;n<=3-offset;n++ && should_break!=true)//移位 
+				for (int n=j;n<=3-offset && should_break!=true;n++)//移位 
 				{
 					block[i][n]=block[i][n+offset];
 					block[i][n+offset]=0;
@@ -174,7 +174,7 @@ int plus_right()		//滑动相加(向右)
 				{
 					should_break=true;
 				}
-				for (int n=j;n>=0-offset;n-- && should_break!=true)//移位 
+				for (int n=j;n>=0-offset && should_break!=true;n--)//移位 
 				{
 					block[i][n]=block[i][n+offset];
 					block[i][n+offset]=0;
@@ -223,7 +223,7 @@ int plus_down()		//滑动相加(向下)
 				{
 					should_break=true;
 				}
-				for (int n=i;n>=0-offset;n-- && should_break!=true)//移位 
+				for (int n=i;n>=0-offset && should_break!=true;n--)//移位 
 				{
 					block[n][j]=block[n+offset][j];
 					block[n+offset][j]=0;
