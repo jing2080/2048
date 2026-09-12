@@ -72,7 +72,7 @@ int plus_up()		//滑动相加(向上)
 					offset++;
 					m++;
 				}
-				if (m>=3) //若从某位到最后一位均为0，跳出内层for循环 
+				if (m>3) //若从某位到最后一位均为0，跳出内层for循环 
 				{
 					should_break=true;
 				}
@@ -121,7 +121,7 @@ int plus_left()		//滑动相加(向左)
 					offset++;
 					m++;
 				}
-				if (m>=3) //若从某位到最后一位均为0，跳出内层for循环 
+				if (m>3) //若从某位到最后一位均为0，跳出内层for循环 
 				{
 					should_break=true;
 				}
@@ -170,7 +170,7 @@ int plus_right()		//滑动相加(向右)
 					offset--;
 					m--;
 				}
-				if (m<=0) //若从某位到最后一位均为0，跳出内层for循环 
+				if (m<0) //若从某位到最后一位均为0，跳出内层for循环 
 				{
 					should_break=true;
 				}
@@ -219,7 +219,7 @@ int plus_down()		//滑动相加(向下)
 					offset--;
 					m--;
 				}
-				if (m<=0) //若从某位到最后一位均为0，跳出内层for循环 
+				if (m<0) //若从某位到最后一位均为0，跳出内层for循环 
 				{
 					should_break=true;
 				}
@@ -253,6 +253,7 @@ int plus_down()		//滑动相加(向下)
 }
 int main()
 {
+	srand(static_cast<unsigned>(time(nullptr)));
 	genarate();
 	genarate();
 	print();
