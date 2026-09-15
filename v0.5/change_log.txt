@@ -1,0 +1,8 @@
+重写flip函数，使其更简洁
+重写flip_back函数，使其更简洁
+修改reset_temporary_array函数，使其参数化
+修改plus_all函数，使其参数化
+修改flip函数，使其参数化
+修改flip_back函数，使其参数化
+增加game_over_detect函数，用以判断游戏是否结束
+修复flip_back函数中if/else链问题
